@@ -50,6 +50,9 @@ class _NewMessageState extends State<NewMessage> {
           Expanded(
               child: TextField(
             controller: _messagingController,
+            onSubmitted: (value) {
+              _submitMessage();
+            },
             textCapitalization: TextCapitalization.sentences,
             autocorrect: true,
             enableSuggestions: true,
